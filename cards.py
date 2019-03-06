@@ -6,7 +6,11 @@ def select_cards(possible_cards, hand):
         answer = input()
         if answer.lower() == 'y':
             hand.append(current_card)
+            display_hand = "\n".join(hand)
         i += 1
+    print("Your current hand is: \n{}".format(display_hand))
+
+
 
     if len(hand) < 3:
         print("You have too few cards in your hand. Please choose only 3.")
@@ -22,7 +26,7 @@ def select_cards(possible_cards, hand):
 available_cards = ['queen of spades', '2 of clubs', '3 of diamonds', 'jack of spades', 'queen of hearts']
 
 new_hand = select_cards(available_cards, [])
-
-display_hand = "\n".join(new_hand)
-
-print("Your new hand is: \n{}".format(display_hand))
+#
+# display_hand = "\n".join(new_hand)
+#
+# print("Your new hand is: \n{}".format(display_hand))
